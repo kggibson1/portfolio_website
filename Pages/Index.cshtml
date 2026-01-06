@@ -1,10 +1,35 @@
-﻿@page
+﻿@*Makes it into a Razor page*@
+@page 
+
+@*Links page to c# model*@
 @model IndexModel
+
 @{
     ViewData["Title"] = "Home page";
 }
 
+@*Title*@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    @*<h2>My name is Kenzie Gibson</h2>
+    <h2>This is my programming portfolio</h2>*@
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div><h2>Language</h2></div>
+
+<div>
+    <button type = "button" class = "code_language_filter">C#</button>
+</div>
+
+<div>
+    <button type = "button" class = "code_language_filter">Python</button>
+</div>
+
+<div>
+    <button type = "button" class = "code_language_filter">JavaScript</button>
+</div>
+
+<div>
+    <button type = "button" class = "code_language_filter">C++</button>
 </div>
