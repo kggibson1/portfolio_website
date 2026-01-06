@@ -1,3 +1,8 @@
+/*
+
+Default css from project creation, will change later
+
+*/
 html {
   font-size: 14px;
 }
@@ -30,11 +35,42 @@ body {
   text-align: start;
 }
 
-.code_language_filter{
-  color: green;
-  border: rgba(56, 21, 21, 0.268);
-  text-align: center;
-  border-radius: 8px;
-  padding: 8px;
+/*
+-----------------------
+Language filter buttons
+-----------------------
+*/
+
+/*Language filter container*/
+.language-filter{
+  display: flex; /*buttons flex with screen size*/
+  flex-direction: column; /*Vertical stacking*/
+  gap: 8px; /*Button spacing*/
+  width: 25%; /*Width of container determined by screen size*/
+  min-width: 220px; /*Button container will never get smaller than 220px*/
 }
 
+.language-btn{
+  color: green; /*text colour*/
+  border-radius: 8px; /*rounded borders*/
+  text-align: center;
+  font-size: 1.1rem; /*rem units are scalable*/
+  padding: 10px;
+}
+
+/*
+
+Adjustments for smaller screens (< 600 px)
+
+*/
+
+@media (max-width: 600px) {
+    .language-filter {
+        width: 100%;      /* full width buttons */
+        min-width: unset;  /* Allow shrinking */
+    }
+
+    .language-btn {
+        font-size: 1rem;  /* font 10% smaller than desktop */
+    }
+}
